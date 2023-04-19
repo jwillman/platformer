@@ -1,0 +1,21 @@
+# Directories
+node_modules/
+dist/
+build/
+
+# Files
+*.log
+*.js
+*.js.map
+*.d.ts
+*.DS_Store
+
+# IDE/Editor-specific
+.vscode/
+.idea/
+
+# Dependencies
+package-lock.json
+yarn.lock
+
+.cache

@@ -1,0 +1,12 @@
+{
+    "name": "side-scrolling-platformer",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    }
+}
