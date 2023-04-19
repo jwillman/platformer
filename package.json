@@ -8,5 +8,8 @@
     },
     "devDependencies": {
         "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "parcel": "^2.8.3"
     }
 }
