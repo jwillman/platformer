@@ -1,4 +1,4 @@
-import PNGbackground from "../clouds.png";
+import PNGbackground from "../img/clouds.png";
 
 export class Background {
     private readonly backgroundImage: HTMLImageElement;
