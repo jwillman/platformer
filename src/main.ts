@@ -9,4 +9,4 @@ canvas.addEventListener("click", () => {
     }
 });
 
-game.gameLoop();
+game.start();
