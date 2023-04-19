@@ -1,37 +1,41 @@
 export class Background {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-    speed: number;
-    color: string;
+    private readonly backgroundImage: HTMLImageElement;
 
-    constructor(
-        x: number = 0,
-        y: number = 0,
-        width: number = 800,
-        height: number = 480,
-        color: string = "skyblue",
-        speed: number = 0.5
-    ) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.color = color;
-        this.speed = speed;
+    constructor() {
+        this.backgroundImage = new Image();
+        this.backgroundImage.src = "path/to/your/background-image.png";
     }
 
-    update(playerVelocityX: number): void {
-        this.x -= playerVelocityX * this.speed;
-        if (this.x <= -this.width) {
-            this.x = 0;
+    draw(ctx: CanvasRenderingContext2D, scrollX: number): void {
+        const canvasWidth = ctx.canvas.width;
+        const canvasHeight = ctx.canvas.height;
+
+        const backgroundWidth = this.backgroundImage.width;
+        const backgroundHeight = this.backgroundImage.height;
+
+        const scrollFactor = 0.5; // Change this value to control the parallax effect
+
+        // Calculate the background's X position based on the scrollX value and the scroll factor
+        const backgroundX = (-scrollX * scrollFactor) % backgroundWidth;
+
+        // Draw the background image
+        ctx.drawImage(
+            this.backgroundImage,
+            backgroundX,
+            0,
+            backgroundWidth,
+            backgroundHeight
+        );
+
+        // If the background image doesn't fully cover the canvas width, draw another copy to fill the remaining area
+        if (backgroundX + backgroundWidth < canvasWidth) {
+            ctx.drawImage(
+                this.backgroundImage,
+                backgroundX + backgroundWidth,
+                0,
+                backgroundWidth,
+                backgroundHeight
+            );
         }
-    }
-
-    draw(ctx: CanvasRenderingContext2D): void {
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.fillRect(this.x + this.width, this.y, this.width, this.height);
     }
 }

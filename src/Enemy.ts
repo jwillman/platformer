@@ -29,8 +29,8 @@ export class Enemy {
         }
     }
 
-    draw(ctx: CanvasRenderingContext2D): void {
+    draw(ctx: CanvasRenderingContext2D, scrollX: number): void {
         ctx.fillStyle = "red";
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.fillRect(this.x - scrollX, this.y, this.width, this.height);
     }
 }

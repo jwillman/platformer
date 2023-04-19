@@ -108,9 +108,9 @@ export class Player {
         });
     }
 
-    draw(ctx: CanvasRenderingContext2D): void {
+    draw(ctx: CanvasRenderingContext2D, scrollX: number): void {
         ctx.fillStyle = "blue";
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.fillRect(this.x - scrollX, this.y, this.width, this.height);
     }
 
     isJumping(): boolean {

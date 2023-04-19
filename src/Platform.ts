@@ -19,8 +19,8 @@ export class Platform {
         this.color = color;
     }
 
-    draw(ctx: CanvasRenderingContext2D): void {
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+    draw(ctx: CanvasRenderingContext2D, scrollX: number): void {
+        ctx.fillStyle = "green";
+        ctx.fillRect(this.x - scrollX, this.y, this.width, this.height);
     }
 }
