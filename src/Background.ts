@@ -1,9 +1,11 @@
+import PNGbackground from "../clouds.png";
+
 export class Background {
     private readonly backgroundImage: HTMLImageElement;
 
     constructor() {
         this.backgroundImage = new Image();
-        this.backgroundImage.src = "path/to/your/background-image.png";
+        this.backgroundImage.src = PNGbackground;
     }
 
     draw(ctx: CanvasRenderingContext2D, scrollX: number): void {
