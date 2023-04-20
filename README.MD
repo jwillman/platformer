@@ -6,7 +6,7 @@ ChatGPT-4 was prompted with a basic description for a side-scrolling game and mo
 
 This side-scrolling platformer game is built using TypeScript, HTML, and CSS. The player controls a character who can move left and right and jump on platforms. The screen scrolls to the right as the player progresses, with new platforms appearing. The game features a background and Mario-like physics.
 
-NOTE: this is only tested on Firefox, Chromium based browsers are currently not working.
+NOTE: only supports Firefox at the moment, Chromium based browsers are currently not working.
 
 ## Features
 
