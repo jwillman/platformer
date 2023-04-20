@@ -13,7 +13,10 @@ This side-scrolling platformer game is built using TypeScript, HTML, and CSS. Th
 -   Platforms for the player to jump on
 -   Game over screen when the player falls below the game area
 -   Restart button on the game over screen
--   TODO Enemies that move and can be defeated by jumping on them
+
+## Feature not working correctly at the moment
+
+-   Enemies that move and can be defeated by jumping on them
 
 ## Getting Started
 
